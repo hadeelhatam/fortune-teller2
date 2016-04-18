@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 public class MagicNumberTest {
     MagicNumbers magicNumbers;
@@ -105,4 +106,109 @@ public class MagicNumberTest {
         int second = magicNumbers.calculateC();
         assertNotEquals("C should provide different values for different names", first, second);
     }
+    
+    //Test case för issue 37
+   @Test
+   public void testIssue37(){
+      magicNumbers.setName("Svante");
+      magicNumbers.setIncome(-10000);
+      magicNumbers.setLocation("Malmö");
+      magicNumbers.setAge(27);
+      magicNumbers.setHeight(0);
+      assertTrue("A is less than 10", magicNumbers.calculateA()<10);
+      assertTrue("A is not negative", magicNumbers.calculateA()>=0);
+      assertTrue("B is less than 10", magicNumbers.calculateB()<10);
+      assertTrue("B is not negative", magicNumbers.calculateB()>=10);
+      assertTrue("C is less than 10", magicNumbers.calculateC()<10);
+      assertTrue("C is not negative", magicNumbers.calculateC()>=10);
+      assertTrue("D is less than 10", magicNumbers.calculateD()<10);
+      assertTrue("D is not negative", magicNumbers.calculateD()>=10);
+      assertTrue("E is less than 10", magicNumbers.calculateE()<10);
+      assertTrue("E is not negative", magicNumbers.calculateE()>=10);
+               
+   }
+   
+    //Test case för issue 38
+   @Test
+   public void testIssue38(){
+      magicNumbers.setName("Svante");
+      magicNumbers.setIncome(10000);
+      magicNumbers.setLocation("Malmö");
+      magicNumbers.setAge(27);
+      magicNumbers.setHeight(0);
+      assertTrue("A is less than 10", magicNumbers.calculateA()<10);
+      assertTrue("A is not negative", magicNumbers.calculateA()>=0);
+      assertTrue("B is less than 10", magicNumbers.calculateB()<10);
+      assertTrue("B is not negative", magicNumbers.calculateB()>=10);
+      assertTrue("C is less than 10", magicNumbers.calculateC()<10);
+      assertTrue("C is not negative", magicNumbers.calculateC()>=10);
+      assertTrue("D is less than 10", magicNumbers.calculateD()<10);
+      assertTrue("D is not negative", magicNumbers.calculateD()>=10);
+      assertTrue("E is less than 10", magicNumbers.calculateE()<10);
+      assertTrue("E is not negative", magicNumbers.calculateE()>=10);
+               
+   }
+    //Test case för issue 39
+   @Test
+   public void testIssue39(){
+      magicNumbers.setName("Svante");
+      magicNumbers.setIncome(10000);
+      magicNumbers.setLocation("Malmö");
+      magicNumbers.setAge(-5);
+      magicNumbers.setHeight(165);
+      assertTrue("A is less than 10", magicNumbers.calculateA()<10);
+      assertTrue("A is not negative", magicNumbers.calculateA()>=0);
+      assertTrue("B is less than 10", magicNumbers.calculateB()<10);
+      assertTrue("B is not negative", magicNumbers.calculateB()>=10);
+      assertTrue("C is less than 10", magicNumbers.calculateC()<10);
+      assertTrue("C is not negative", magicNumbers.calculateC()>=10);
+      assertTrue("D is less than 10", magicNumbers.calculateD()<10);
+      assertTrue("D is not negative", magicNumbers.calculateD()>=10);
+      assertTrue("E is less than 10", magicNumbers.calculateE()<10);
+      assertTrue("E is not negative", magicNumbers.calculateE()>=10);
+               
+   }
+    //Test case för issue 40
+   @Test
+   public void testIssue40(){
+      magicNumbers.setName("Svante");
+      magicNumbers.setIncome(10000);
+      magicNumbers.setLocation("Malmö");
+      magicNumbers.setAge(27);
+      magicNumbers.setHeight(-20);
+      assertTrue("A is less than 10", magicNumbers.calculateA()<10);
+      assertTrue("A is not negative", magicNumbers.calculateA()>=0);
+      assertTrue("B is less than 10", magicNumbers.calculateB()<10);
+      assertTrue("B is not negative", magicNumbers.calculateB()>=10);
+      assertTrue("C is less than 10", magicNumbers.calculateC()<10);
+      assertTrue("C is not negative", magicNumbers.calculateC()>=10);
+      assertTrue("D is less than 10", magicNumbers.calculateD()<10);
+      assertTrue("D is not negative", magicNumbers.calculateD()>=10);
+      assertTrue("E is less than 10", magicNumbers.calculateE()<10);
+      assertTrue("E is not negative", magicNumbers.calculateE()>=10);
+               
+   }
+    //Test case för issue 41
+   @Test
+   public void testIssue41(){
+      magicNumbers.setName("Svante");
+      magicNumbers.setIncome(0);
+      magicNumbers.setLocation("Malmö");
+      magicNumbers.setAge(27);
+      magicNumbers.setHeight(165);
+      assertTrue("A is less than 10", magicNumbers.calculateA()<10);
+      assertTrue("A is not negative", magicNumbers.calculateA()>=0);
+      assertTrue("B is less than 10", magicNumbers.calculateB()<10);
+      assertTrue("B is not negative", magicNumbers.calculateB()>=10);
+      assertTrue("C is less than 10", magicNumbers.calculateC()<10);
+      assertTrue("C is not negative", magicNumbers.calculateC()>=10);
+      assertTrue("D is less than 10", magicNumbers.calculateD()<10);
+      assertTrue("D is not negative", magicNumbers.calculateD()>=10);
+      assertTrue("E is less than 10", magicNumbers.calculateE()<10);
+      assertTrue("E is not negative", magicNumbers.calculateE()>=10);
+               
+   }
+    
 }
+
+
